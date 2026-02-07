@@ -1,8 +1,12 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #0e0e0e;
   color: #fff;
+  background-image: url('https://cdn.discordapp.com/attachments/1450360196894425220/1467266781193175121/images_2.jpg?ex=698853ed&is=6987026d&hm=0b999abcf184af0711275071fdb00cda4d1cbfe5ed1a30f2f63164ab6fc7e596&'); /* ganti nama file wallpaper kamu */
+  background-size: cover;       /* biar full halaman */
+  background-position: center;  /* biar pas di tengah */
+  background-repeat: no-repeat; /* jangan diulang */
+}
 }
 
 .slider {
