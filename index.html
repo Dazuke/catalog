@@ -7,69 +7,122 @@
 </head>
 <body>
 
-<!-- SLIDER -->
+<!-- IKLAN -->
 <div class="slider">
   <div class="slide" style="background-image:url('assets/slide1.jpg')"></div>
   <div class="slide" style="background-image:url('assets/slide2.jpg')"></div>
   <div class="slide" style="background-image:url('assets/slide3.jpg')"></div>
 </div>
 
-<!-- GRID -->
+<!-- KATALOG -->
 <div class="grid">
-  <div class="card" onclick="openBuy('Akun Level 120','Rp50.000')">
+  <div class="card" onclick="openBuy('Akun Level 120','Rp50.000','assets/akun1.jpg')">
     <img src="assets/akun1.jpg">
     <p>Akun Level 120</p>
   </div>
-  <div class="card" onclick="openBuy('Akun Sultan','Rp150.000')">
+
+  <div class="card" onclick="openBuy('Akun Sultan','Rp150.000','assets/akun2.jpg')">
     <img src="assets/akun2.jpg">
-    <p>FISH UR DATPOL ELEMENT</p>
+    <p>Akun Sultan</p>
   </div>
-  <div class="card" onclick="openBuy('Akun Sultan','Rp150.000')">
-    <img src="assets/akun2.jpg">
-    <p>FISH UR DATPOL ELEMENT</p>
-  </div>
-  <div class="card" onclick="openBuy('Akun Sultan','Rp150.000')">
-    <img src="assets/akun2.jpg">
-    <p>FISH UR DATPOL ELEMENT</p>
-  </div>
-  <div class="card" onclick="openBuy('Akun Sultan','Rp150.000')">
-    <img src="assets/akun2.jpg">
-    <p>FISH UR DATPOL ELEMENT</p>
-  </div>
-  <div class="card" onclick="openBuy('Akun Sultan','Rp150.000')">
-    <img src="assets/akun2.jpg">
-    <p>FISH UR DATPOL ELEMENT</p>
-  </div>
-  <div class="card" onclick="openBuy('Akun Sultan','Rp150.000')">
-    <img src="assets/akun2.jpg">
-    <p>FISH UR DATPOL ELEMENT</p>
-  </div>
-  <div class="card" onclick="openBuy('Akun Sultan','Rp150.000')">
-    <img src="assets/akun2.jpg">
-    <p>FISH UR DATPOL ELEMENT</p>
-  </div>
-  <div class="card" onclick="openBuy('Akun Rare','Rp100.000')">
+
+  <div class="card" onclick="openBuy('Akun Rare','Rp100.000','assets/akun3.jpg')">
     <img src="assets/akun3.jpg">
     <p>Akun Rare</p>
   </div>
-  <!-- Tambahkan sampai 9 akun -->
 </div>
+
+  <div class="card" onclick="openBuy('Akun Rare','Rp100.000','assets/akun3.jpg')">
+    <img src="assets/akun3.jpg">
+    <p>Akun Rare</p>
+  </div>
+</div>
+
+  <div class="card" onclick="openBuy('Akun Rare','Rp100.000','assets/akun3.jpg')">
+    <img src="assets/akun3.jpg">
+    <p>Akun Rare</p>
+  </div>
+</div>
+
+  <div class="card" onclick="openBuy('Akun Rare','Rp100.000','assets/akun3.jpg')">
+    <img src="assets/akun3.jpg">
+    <p>Akun Rare</p>
+  </div>
+</div>
+
+
+  <div class="card" onclick="openBuy('Akun Rare','Rp100.000','assets/akun3.jpg')">
+    <img src="assets/akun3.jpg">
+    <p>Akun Rare</p>
+  </div>
+</div>
+
+<div class="card" onclick="openBuy('Akun Rare','Rp100.000','assets/akun3.jpg')">
+    <img src="assets/akun3.jpg">
+    <p>Akun Rare</p>
+  </div>
+</div>
+  <div class="card" onclick="openBuy('Akun Rare','Rp100.000','assets/akun3.jpg')">
+    <img src="assets/akun3.jpg">
+    <p>Akun Rare</p>
+  </div>
+</div>
+  <div class="card" onclick="openBuy('Akun Rare','Rp100.000','assets/akun3.jpg')">
+    <img src="assets/akun3.jpg">
+    <p>Akun Rare</p>
+  </div>
+</div>
+  <div class="card" onclick="openBuy('Akun Rare','Rp100.000','assets/akun3.jpg')">
+    <img src="assets/akun3.jpg">
+    <p>Akun Rare</p>
+  </div>
+</div>
+  <div class="card" onclick="openBuy('Akun Rare','Rp100.000','assets/akun3.jpg')">
+    <img src="assets/akun3.jpg">
+    <p>Akun Rare</p>
+  </div>
+</div>
+  <div class="card" onclick="openBuy('Akun Rare','Rp100.000','assets/akun3.jpg')">
+    <img src="assets/akun3.jpg">
+    <p>Akun Rare</p>
+  </div>
+</div>
+  <div class="card" onclick="openBuy('Akun Rare','Rp100.000','assets/akun3.jpg')">
+    <img src="assets/akun3.jpg">
+    <p>Akun Rare</p>
+  </div>
+</div>
+  <div class="card" onclick="openBuy('Akun Rare','Rp100.000','assets/akun3.jpg')">
+    <img src="assets/akun3.jpg">
+    <p>Akun Rare</p>
+  </div>
+</div>
+  <div class="card" onclick="openBuy('Akun Rare','Rp100.000','assets/akun3.jpg')">
+    <img src="assets/akun3.jpg">
+    <p>Akun Rare</p>
+  </div>
+</div>
+  
 
 <!-- POPUP -->
 <div class="popup" id="popup">
   <div class="box">
+    <img id="preview">
     <h3 id="akun"></h3>
-    <p id="harga"></p>
+    <div id="harga" class="harga"></div>
 
     <input id="nama" placeholder="Nama kamu">
-    <input id="hp" placeholder="Nomor HP / WA">
+    <input id="hp" placeholder="Nomor WhatsApp">
+
+    <select id="pay" onchange="showQR()">
+      <option value="">Pilih Payment</option>
+      <option value="QRIS">QRIS</option>
+      <option value="DANA">DANA</option>
+    </select>
+
+    <img id="qr" class="qr">
 
     <p class="info">Mohon nunggu penjual jawab</p>
-
-    <select id="pay">
-      <option>QRIS</option>
-      <option>DANA</option>
-    </select>
 
     <button onclick="process()">Beli Sekarang</button>
   </div>
