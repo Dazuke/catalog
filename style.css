@@ -24,8 +24,8 @@ body {
 }
 
 .slide:nth-child(1){animation-delay:0s;}
-.slide:nth-child(2){animation-delay:2s;}
-.slide:nth-child(3){animation-delay:4s;}
+.slide:nth-child(2){animation-delay:4s;}
+.slide:nth-child(3){animation-delay:8s;}
 
 @keyframes slide {
   0%{opacity:0}
@@ -56,6 +56,24 @@ body {
 
 .card p {
   padding: 8px;
+}
+
+.card.sold {
+  position: relative;
+  filter: grayscale(100%) brightness(0.4);
+  pointer-events: none;
+}
+
+.sold-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: red;
+  background: rgba(0,0,0,0.6);
 }
 
 .popup, .loading {
@@ -104,6 +122,7 @@ button {
   background: #00ff88;
   border: none;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .info {
