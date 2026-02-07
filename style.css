@@ -2,7 +2,7 @@
   margin: 0;
   font-family: Arial, sans-serif;
   color: #fff;
-  background-image: url('assets/qris.png'); /* ganti nama file wallpaper kamu */
+  background-image: url('qris.png'); /* ganti nama file wallpaper kamu */
   background-size: cover;       /* biar full halaman */
   background-position: center;  /* biar pas di tengah */
   background-repeat: no-repeat; /* jangan diulang */
