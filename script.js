@@ -10,14 +10,20 @@ function showQR(){
   const qr = document.getElementById('qr');
 
   if(pay === 'QRIS'){
-    qr.src = 'assets/slide1.jpg';
+    qr.src = 'assets/qris.png';
     qr.style.display = 'block';
   } else if(pay === 'DANA'){
-    qr.src = 'assets/slide2.jpg';
+    qr.src = 'assets/dana.png';
     qr.style.display = 'block';
   } else {
     qr.style.display = 'none';
   }
+}
+
+function saveOrder(data){
+  let orders = JSON.parse(localStorage.getItem('orders')) || [];
+  orders.push(data);
+  localStorage.setItem('orders', JSON.stringify(orders));
 }
 
 function process(){
@@ -32,6 +38,16 @@ function process(){
     return;
   }
 
+  saveOrder({
+    nama,
+    hp,
+    akun,
+    harga,
+    pay,
+    status: "MENUNGGU KONFIRMASI",
+    time: new Date().toISOString()
+  });
+
   document.getElementById('popup').style.display = 'none';
   document.getElementById('loading').style.display = 'flex';
 
@@ -45,6 +61,7 @@ Harga: ${harga}
 Payment: ${pay}`;
 
   setTimeout(()=>{
-    window.open(`https://wa.me/6287872748734?text=${encodeURIComponent(pesan)}`);
+    window.open(`https://wa.me/6289688204332?text=apakah akun ini ready?${encodeURIComponent(pesan)}`);
+    document.getElementById('loading').style.display = 'none';
   },2000);
 }
