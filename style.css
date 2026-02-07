@@ -2,11 +2,18 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: #fff;
-  background-image: url('qris.png'); /* ganti nama file wallpaper kamu */
-  background-size: cover;       /* biar full halaman */
-  background-position: center;  /* biar pas di tengah */
-  background-repeat: no-repeat; /* jangan diulang */
+  position: relative;  /* penting supaya pseudo-element bisa di belakang */
+  z-index: 0;          /* konten di atas wallpaper */
 }
+
+body::before {
+  content: "";
+  position: fixed;        /* wallpaper diam saat scroll */
+  inset: 0;               /* full layar */
+  background: url('qris.png') no-repeat center center;
+  background-size: cover; /* full screen tapi tetap proporsional */
+  z-index: -1;            /* di belakang semua konten */
+  opacity: 0.5;           /* opsional: biar teks/element terlihat */
 }
 
 .slider {
@@ -46,7 +53,7 @@ body {
 }
 
 .card {
-  background: #1b1b1b;
+  background: rgba(27, 27, 27, 0.8); /* gelap transparan */
   border-radius: 8px;
   overflow: hidden;
   cursor: pointer;
