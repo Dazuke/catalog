@@ -1,15 +1,50 @@
-function openBuy(a,h){
+function openBuy(a,h,img){
   document.getElementById('akun').innerText = a;
   document.getElementById('harga').innerText = h;
-  document.getElementById('popup').style.display='flex';
+  document.getElementById('preview').src = img;
+  document.getElementById('popup').style.display = 'flex';
+}
+
+function showQR(){
+  const pay = document.getElementById('pay').value;
+  const qr = document.getElementById('qr');
+
+  if(pay === 'QRIS'){
+    qr.src = 'assets/slide1.jpg';
+    qr.style.display = 'block';
+  } else if(pay === 'DANA'){
+    qr.src = 'assets/slide2.jpg';
+    qr.style.display = 'block';
+  } else {
+    qr.style.display = 'none';
+  }
 }
 
 function process(){
-  document.getElementById('popup').style.display='none';
-  document.getElementById('loading').style.display='flex';
+  const nama = document.getElementById('nama').value;
+  const hp = document.getElementById('hp').value;
+  const akun = document.getElementById('akun').innerText;
+  const harga = document.getElementById('harga').innerText;
+  const pay = document.getElementById('pay').value;
+
+  if(!nama || !hp || !pay){
+    alert("Lengkapi data dulu");
+    return;
+  }
+
+  document.getElementById('popup').style.display = 'none';
+  document.getElementById('loading').style.display = 'flex';
+
+  const pesan =
+`ORDER AKUN ROBLOX
+
+Nama: ${nama}
+HP: ${hp}
+Akun: ${akun}
+Harga: ${harga}
+Payment: ${pay}`;
 
   setTimeout(()=>{
-    const wa = "6287872748734"; // ganti dengan nomor WA kamu
-    window.open(`https://wa.me/${wa}`);
+    window.open(`https://wa.me/6287872748734?text=${encodeURIComponent(pesan)}`);
   },2000);
 }
