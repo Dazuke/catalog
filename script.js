@@ -10,10 +10,10 @@ function showQR(){
   const qr = document.getElementById('qr');
 
   if(pay === 'QRIS'){
-    qr.src = 'assets/qris.png';
+    qr.src = 'qris.png';
     qr.style.display = 'block';
   } else if(pay === 'DANA'){
-    qr.src = 'assets/dana.png';
+    qr.src = 'dana.png';
     qr.style.display = 'block';
   } else {
     qr.style.display = 'none';
