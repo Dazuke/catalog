@@ -61,7 +61,7 @@ Harga: ${harga}
 Payment: ${pay}`;
 
   setTimeout(()=>{
-    window.open(`https://wa.me/6289688204332?text=apakah akun ini ready?${encodeURIComponent(pesan)}`);
+    window.open(`https://wa.me/6287872748734?text=${encodeURIComponent(pesan)}`);
     document.getElementById('loading').style.display = 'none';
   },2000);
 }
